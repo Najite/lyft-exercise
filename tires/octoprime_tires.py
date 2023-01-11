@@ -2,12 +2,9 @@ from tires.tires import Tires
 
 
 class Octoprime(Tires):
-    def __init__(self, wears):
-        self.wears = wears
+    def __init__(self, tire_wears):
+        self.tire_wears = tire_wears
         
     
     def needs_service(self):
-        if self.wears >= 3:
-            return True
-        else:
-            return False
+        return sum(self.tire_wears) >= 3.0

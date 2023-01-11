@@ -2,12 +2,11 @@ from tires.tires import Tires
 
 
 class CarriganTires(Tires):
-    def __init__(self, wears):
-        self.wears = wears
+    def __init__(self, tire_wears):
+        self.tire_wears = tire_wears
         
         
     def needs_service(self):
-        if self.wears >= 0.9:
+        if self.tire_wears >= 0.9:
             return True
-        else: 
-            return False
+        return False
